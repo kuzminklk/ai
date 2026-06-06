@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Example {
+contract Storage {
 		string public name;
 		uint256 public value;
 
