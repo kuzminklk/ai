@@ -1,0 +1,834 @@
+:root {
+	--ink: #203327;
+	--green: #395846;
+	--lime: #c9ed63;
+	--paper: #f4f1e9;
+	--orange: #fa6d3d;
+	--cream: #fffdf7;
+	--serif: "Playfair Display", Georgia, serif;
+	--sans: Manrope, Arial, sans-serif
+}
+
+* {
+	box-sizing: border-box
+}
+
+html {
+	scroll-behavior: smooth
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 15px
+}
+
+.site-header {
+	height: 86px;
+	padding: 0 5vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--paper);
+	position: relative;
+	z-index: 10
+}
+
+.brand {
+	display: flex;
+	gap: 9px;
+	align-items: center;
+	color: var(--ink);
+	font: 700 12px/10px var(--sans);
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	text-decoration: none
+}
+
+.brand svg {
+	width: 30px;
+	height: 38px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.55
+}
+
+.desktop-nav {
+	display: flex;
+	gap: 36px;
+	margin-left: 8vw
+}
+
+.desktop-nav a,
+.header-action {
+	color: var(--ink);
+	font-size: 12px;
+	font-weight: 700;
+	text-decoration: none
+}
+
+.header-action {
+	border-bottom: 1px solid var(--ink);
+	padding-bottom: 3px
+}
+
+.header-action span {
+	font-size: 16px;
+	margin-left: 7px
+}
+
+.menu-toggle {
+	display: none
+}
+
+.hero {
+	min-height: calc(100vh - 86px);
+	display: grid;
+	grid-template-columns: 49% 51%;
+	position: relative
+}
+
+.hero-copy {
+	padding: 12vh 5vw 8vh;
+	align-self: center
+}
+
+.eyebrow {
+	font-weight: 700;
+	font-size: 10px;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin: 0 0 25px
+}
+
+.eyebrow span {
+	width: 20px;
+	height: 1px;
+	background: currentColor;
+	display: inline-block
+}
+
+.hero h1,
+.section-heading h2,
+.booking h2 {
+	font: 500 clamp(50px, 6.4vw, 104px)/.96 var(--serif);
+	letter-spacing: -.055em;
+	margin: 0
+}
+
+.hero h1 em,
+.section-heading em,
+.booking h2 em,
+.accent-copy em {
+	font-weight: 500
+}
+
+.hero-text {
+	max-width: 350px;
+	color: #607168;
+	line-height: 1.65;
+	margin: 34px 0
+}
+
+.hero-actions {
+	display: flex;
+	align-items: center;
+	gap: 30px
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 28px;
+	border: 0;
+	padding: 17px 19px;
+	color: #fff;
+	font: 700 11px var(--sans);
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer
+}
+
+.button span {
+	font-size: 18px;
+	line-height: 8px
+}
+
+.button-dark {
+	background: var(--ink)
+}
+
+.text-link {
+	font-size: 11px;
+	color: var(--ink);
+	font-weight: 700;
+	text-decoration: none;
+	border-bottom: 1px solid var(--ink);
+	padding-bottom: 4px
+}
+
+.text-link span {
+	font-size: 15px;
+	margin-left: 6px
+}
+
+.hero-visual {
+	min-height: 600px;
+	background: var(--green);
+	padding: 30px;
+	position: relative
+}
+
+.hero-image,
+.menu-photo,
+.moment-image,
+.booking-image {
+	background-size: cover;
+	background-position: center
+}
+
+.hero-image {
+	height: 100%;
+	min-height: 580px;
+	background-image: linear-gradient(0deg, rgba(26, 45, 31, .15), rgba(26, 45, 31, .05)), url('https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=1200&q=85')
+}
+
+.open-card {
+	position: absolute;
+	right: 0;
+	bottom: 46px;
+	background: var(--lime);
+	color: var(--ink);
+	padding: 20px 26px;
+	width: 220px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px
+}
+
+.open-card small {
+	font-size: 9px;
+	letter-spacing: .09em;
+	text-transform: uppercase;
+	font-weight: 700
+}
+
+.open-card strong {
+	font: 600 21px var(--serif)
+}
+
+.open-card span {
+	font-size: 10px
+}
+
+.hero-stamp {
+	position: absolute;
+	right: 37px;
+	top: 37px;
+	width: 92px;
+	height: 92px;
+	background: var(--orange);
+	color: #fff;
+	border-radius: 50%;
+	padding: 11px 12px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	transform: rotate(9deg);
+	font-size: 8px;
+	line-height: 1.15;
+	font-weight: 700;
+	letter-spacing: .09em
+}
+
+.hero-stamp b {
+	position: absolute;
+	font-size: 28px;
+	left: 35px;
+	top: 28px;
+	font-weight: 400
+}
+
+.scroll-cue {
+	position: absolute;
+	bottom: 28px;
+	left: 5vw;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: .12em;
+	font-weight: 700
+}
+
+.scroll-cue i {
+	width: 42px;
+	height: 1px;
+	background: var(--ink);
+	position: relative
+}
+
+.scroll-cue i:after {
+	content: '↓';
+	position: absolute;
+	right: -1px;
+	top: -11px;
+	font-style: normal;
+	font-size: 14px
+}
+
+.intro {
+	padding: 145px 10vw 140px;
+	background: var(--cream);
+	display: grid;
+	grid-template-columns: 25% 75%
+}
+
+.intro-label {
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: .13em;
+	font-weight: 700
+}
+
+.intro-content {
+	display: grid;
+	grid-template-columns: 1fr 210px;
+	gap: 4vw
+}
+
+.display-copy {
+	font: 500 clamp(38px, 4.7vw, 72px)/1.07 var(--serif);
+	letter-spacing: -.04em;
+	margin: 0
+}
+
+.intro-note {
+	align-self: end;
+	color: #657269;
+	font-size: 12px;
+	line-height: 1.7
+}
+
+.intro-note p {
+	margin: 16px 0 0
+}
+
+.leaf {
+	font-size: 26px;
+	color: var(--green)
+}
+
+.menu-section {
+	padding: 115px 5vw;
+	background: #e1e7d8;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	gap: 4vw
+}
+
+.section-heading {
+	padding-top: 12px
+}
+
+.section-heading h2 {
+	font-size: clamp(44px, 4.4vw, 68px);
+	margin-bottom: 38px
+}
+
+.menu-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px
+}
+
+.menu-card {
+	background: var(--cream);
+	position: relative;
+	min-height: 365px;
+	overflow: hidden
+}
+
+.menu-card--tall {
+	grid-row: span 2;
+	min-height: 585px
+}
+
+.menu-photo {
+	height: 68%;
+	min-height: 245px
+}
+
+.menu-card--tall .menu-photo {
+	height: 100%
+}
+
+.breakfast {
+	background-image: linear-gradient(0deg, rgba(23, 35, 25, .5), transparent 55%), url('https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=85')
+}
+
+.lunch {
+	background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85')
+}
+
+.menu-card-copy {
+	padding: 21px 23px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--cream)
+}
+
+.menu-card--tall .menu-card-copy {
+	color: #fff;
+	background: linear-gradient(0deg, rgba(23, 35, 25, .88), transparent)
+}
+
+.menu-card-copy p {
+	font-size: 9px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1em;
+	margin: 0 0 8px
+}
+
+.menu-card h3 {
+	font: 600 29px var(--serif);
+	letter-spacing: -.03em;
+	margin: 0 0 5px
+}
+
+.menu-card-copy span {
+	font-size: 11px;
+	color: #617168
+}
+
+.menu-card--tall .menu-card-copy span {
+	color: #fff
+}
+
+.menu-card-copy b {
+	font-size: 15px;
+	margin-left: 5px
+}
+
+.menu-card--accent {
+	background: var(--orange);
+	color: #fff;
+	display: flex
+}
+
+.accent-copy {
+	padding: 31px 26px;
+	align-self: flex-end;
+	position: relative;
+	z-index: 2
+}
+
+.accent-copy p {
+	font-size: 9px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .09em
+}
+
+.accent-copy h3 {
+	font: 500 34px/1.04 var(--serif)
+}
+
+.accent-copy a {
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 4px;
+	font-size: 10px
+}
+
+.flower {
+	font: 400 180px/1 var(--serif);
+	position: absolute;
+	color: #e9582f;
+	right: -32px;
+	top: -27px
+}
+
+.moments-section {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	background: var(--cream)
+}
+
+.moment-main {
+	padding: 86px 4vw 68px 10vw
+}
+
+.moment-image.large-table {
+	height: 474px;
+	background-image: url('https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=1300&q=85')
+}
+
+.moment-caption {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 19px;
+	gap: 25px
+}
+
+.moment-caption span {
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: .12em;
+	font-weight: 700
+}
+
+.moment-caption p {
+	font: 500 21px/1.2 var(--serif);
+	margin: 0
+}
+
+.moment-side {
+	background: var(--green);
+	padding: 86px 8vw 68px 4vw;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end
+}
+
+.espresso {
+	height: 270px;
+	width: 84%;
+	margin-bottom: 28px;
+	background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85')
+}
+
+.side-copy {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	font: 500 25px/1.1 var(--serif)
+}
+
+.side-copy a {
+	font: 700 10px var(--sans);
+	letter-spacing: .02em;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+	width: max-content;
+	padding-bottom: 4px
+}
+
+.side-copy b {
+	font-size: 14px;
+	margin-left: 4px
+}
+
+.booking {
+	display: grid;
+	grid-template-columns: 54% 46%;
+	min-height: 660px
+}
+
+.booking-image {
+	background-image: linear-gradient(90deg, rgba(15, 34, 22, .16), transparent), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1300&q=85');
+	background-position: center
+}
+
+.booking-panel {
+	background: var(--lime);
+	padding: 80px 7vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start
+}
+
+.booking h2 {
+	font-size: clamp(45px, 4.5vw, 68px)
+}
+
+.booking-panel>p:not(.eyebrow):not(.form-feedback) {
+	font-size: 12px;
+	line-height: 1.7;
+	max-width: 330px;
+	margin: 28px 0 25px
+}
+
+form {
+	width: min(100%, 350px);
+	display: grid;
+	gap: 14px
+}
+
+label {
+	font-size: 9px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .09em
+}
+
+input {
+	display: block;
+	width: 100%;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid rgba(32, 51, 39, .6);
+	padding: 10px 0 9px;
+	font: 500 14px var(--sans);
+	color: var(--ink);
+	outline: none
+}
+
+.button-light {
+	background: var(--ink);
+	width: 100%;
+	margin-top: 8px
+}
+
+.form-feedback {
+	font-size: 11px;
+	font-weight: 700;
+	min-height: 18px;
+	margin: 14px 0 0
+}
+
+.footer {
+	background: var(--ink);
+	color: #f2f1e9;
+	padding: 74px 5vw 26px
+}
+
+.brand--footer {
+	color: var(--lime)
+}
+
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start
+}
+
+.footer-top>p {
+	font: 500 21px/1.18 var(--serif);
+	margin: 0
+}
+
+.footer-links {
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr;
+	gap: 30px;
+	margin: 91px 0
+}
+
+.footer small {
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: .12em;
+	color: #a7b5a6;
+	font-weight: 700
+}
+
+.footer-links p,
+.footer-links a {
+	display: block;
+	color: #fff;
+	font: 500 16px/1.55 var(--serif);
+	text-decoration: none;
+	margin: 10px 0 0
+}
+
+.footer-links a+a {
+	margin-top: 2px
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, .17);
+	padding-top: 19px;
+	display: flex;
+	justify-content: space-between;
+	color: #a7b5a6;
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: .1em
+}
+
+.footer-bottom a {
+	color: #a7b5a6;
+	text-decoration: none
+}
+
+@media(max-width:800px) {
+	.site-header {
+		height: 70px;
+		padding: 0 24px
+	}
+
+	.desktop-nav,
+	.header-action {
+		display: none
+	}
+
+	.menu-toggle {
+		display: flex;
+		gap: 5px;
+		flex-direction: column;
+		background: none;
+		border: 0
+	}
+
+	.menu-toggle i {
+		display: block;
+		width: 24px;
+		height: 1px;
+		background: var(--ink)
+	}
+
+	.hero {
+		grid-template-columns: 1fr
+	}
+
+	.hero-copy {
+		padding: 75px 24px 52px
+	}
+
+	.hero h1 {
+		font-size: clamp(52px, 16vw, 80px)
+	}
+
+	.hero-visual {
+		min-height: 440px;
+		padding: 20px
+	}
+
+	.hero-image {
+		min-height: 400px
+	}
+
+	.scroll-cue {
+		display: none
+	}
+
+	.open-card {
+		bottom: 18px;
+		padding: 16px 17px;
+		width: 185px
+	}
+
+	.intro {
+		padding: 80px 24px;
+		display: block
+	}
+
+	.intro-label {
+		margin-bottom: 42px
+	}
+
+	.intro-content {
+		display: block
+	}
+
+	.intro-note {
+		max-width: 260px;
+		margin: 42px 0 0
+	}
+
+	.menu-section {
+		padding: 72px 24px;
+		display: block
+	}
+
+	.section-heading {
+		margin-bottom: 42px
+	}
+
+	.menu-grid {
+		grid-template-columns: 1fr
+	}
+
+	.menu-card--tall {
+		grid-row: auto;
+		min-height: 450px
+	}
+
+	.menu-card {
+		min-height: 300px
+	}
+
+	.menu-card--accent {
+		min-height: 310px
+	}
+
+	.moments-section {
+		display: block
+	}
+
+	.moment-main {
+		padding: 65px 24px 52px
+	}
+
+	.moment-image.large-table {
+		height: 350px
+	}
+
+	.moment-caption {
+		display: block
+	}
+
+	.moment-caption p {
+		margin-top: 24px
+	}
+
+	.moment-side {
+		padding: 52px 24px
+	}
+
+	.espresso {
+		height: 270px;
+		width: 100%
+	}
+
+	.booking {
+		display: block
+	}
+
+	.booking-image {
+		height: 320px
+	}
+
+	.booking-panel {
+		padding: 66px 24px
+	}
+
+	.footer {
+		padding: 55px 24px 24px
+	}
+
+	.footer-links {
+		grid-template-columns: 1fr 1fr;
+		margin: 62px 0;
+		row-gap: 34px
+	}
+
+	.footer-links>div:last-child {
+		grid-column: span 2
+	}
+
+	.hero-stamp {
+		top: 24px;
+		right: 25px
+	}
+
+	.hero-actions {
+		gap: 19px
+	}
+}
