@@ -1,0 +1,9 @@
+[submodule "web/central-park"]
+	path = web/central-park
+	url = git@github.com:kuzminklk/central-park.git
+[submodule "web/belarus-digital"]
+	path = web/belarus-digital
+	url = https://github.com/kuzminklk/belarus-digital
+[submodule "web/cosmos-company"]
+	path = web/cosmos-company
+	url = https://github.com/kuzminklk/cosmos-company
