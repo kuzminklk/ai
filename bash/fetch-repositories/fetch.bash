@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 INPUT_FILE="repositories.txt"

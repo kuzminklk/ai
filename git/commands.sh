@@ -1,4 +1,3 @@
-
 # — Clean —
 # After branch switching
 git clean -fdx

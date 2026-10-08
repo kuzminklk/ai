@@ -3,19 +3,19 @@
 pragma solidity ^0.8.0;
 
 contract Storage {
-		string public name;
-		uint256 public value;
+	string public name;
+	uint256 public value;
 
-		constructor(string memory _name, uint256 _value) {
-				name = _name;
-				value = _value;
-		}
+	constructor(string memory _name, uint256 _value) {
+		name = _name;
+		value = _value;
+	}
 
-		function setName(string memory _name) public {
-				name = _name;
-		}
+	function setName(string memory _name) public {
+		name = _name;
+	}
 
-		function setValue(uint256 _value) public {
-				value = _value;
-		}
+	function setValue(uint256 _value) public {
+		value = _value;
+	}
 }
