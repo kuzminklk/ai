@@ -7,3 +7,6 @@
 [submodule "web/cosmos-company"]
 	path = web/cosmos-company
 	url = https://github.com/kuzminklk/cosmos-company
+[submodule "web/telegram/retro-game"]
+	path = web/telegram/retro-game
+	url = git@github.com:kuzminklk/retro-game.git
