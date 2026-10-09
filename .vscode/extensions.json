@@ -3,6 +3,7 @@
 		"esbenp.prettier-vscode",
 		"editorconfig.editorconfig",
 		"JuanBlanco.solidity",
-		"tamasfe.even-better-toml"
+		"tamasfe.even-better-toml",
+		"charliermarsh.ruff"
 	]
 }
