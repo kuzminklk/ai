@@ -10,3 +10,6 @@
 [submodule "web/telegram/retro-game"]
 	path = web/telegram/retro-game
 	url = git@github.com:kuzminklk/retro-game.git
+[submodule "web/daniel-cosmo"]
+	path = web/daniel-cosmo
+	url = git@github.com:kuzminklk/daniel-cosmo.git
