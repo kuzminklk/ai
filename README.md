@@ -11,4 +11,4 @@ Part of computer-science study curriculum available in [Notion](https://kuzminkl
 ### Technologies
 
 Development: Artificial intelligence driven or assistance, Visual Studio Code  
-Formatting: “.vscode/…”, “.editorconfig”, Prettier
+Formatting: “.editorconfig”, “.vscode/…”, Prettier
