@@ -12,3 +12,10 @@ Part of computer-science study curriculum available in [Notion](https://kuzminkl
 
 Development: Artificial intelligence driven or assistance, Visual Studio Code  
 Formatting: “.editorconfig”, “.vscode/…”, Prettier, Even Better TOML, Ruff
+
+## Usage
+
+### Clone
+
+Clone with submodules: `git clone --recurse-submodules …`  
+Link gitmodules to remote branch: `git submodule update --remote`
